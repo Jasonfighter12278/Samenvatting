@@ -16,48 +16,64 @@
       background: #22c1c3;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
     }
     h1 {
       margin: 0;
+      font-size: 2em;
     }
     .container {
-      max-width: 1000px;
-      margin: 20px auto;
+      max-width: 1100px;
+      margin: 30px auto;
       padding: 20px;
     }
     .samenvatting {
       background: white;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
     }
     .samenvatting h2 {
       margin-top: 0;
+      color: #22c1c3;
+    }
+    .samenvatting ul {
+      list-style: none;
+      padding: 0;
+    }
+    .samenvatting li {
+      background: #f0fafa;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-left: 4px solid #22c1c3;
+      border-radius: 6px;
     }
     .mindmap {
       position: relative;
       background: white;
-      border-radius: 10px;
-      padding: 40px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      height: 600px;
     }
     .node {
-      display: inline-block;
+      position: absolute;
       padding: 12px 15px;
       border: 2px solid #22c1c3;
       border-radius: 10px;
       background: #fff;
       width: 180px;
-      margin: 20px;
+      text-align: center;
       font-size: 14px;
     }
     .center {
       background: #22c1c3;
       color: white;
       font-weight: bold;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
     .lines {
       position: absolute;
@@ -70,54 +86,54 @@
     line {
       stroke: #22c1c3;
       stroke-width: 2;
-      stroke-opacity: 0.5;
+      stroke-opacity: 0.6;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Prikkels & Waarnemen</h1>
-    <p>Korte samenvatting + visuele mindmap</p>
+    <p>Kernpunten en mindmap</p>
   </header>
 
   <div class="container">
     <section class="samenvatting">
       <h2>Kernpunten</h2>
       <ul>
-        <li><strong>Prikkel</strong> = waarneembare verandering die een reactie uitlokt.</li>
-        <li><strong>Waarnemen</strong> = prikkels opnemen via zintuigen: zien, horen, voelen, ruiken, proeven.</li>
-        <li>Route: <em>zintuig → zenuwstelsel → hersenen → reactie</em>.</li>
+        <li><strong>Prikkel:</strong> waarneembare verandering die een reactie uitlokt.</li>
+        <li><strong>Waarnemen:</strong> opnemen van prikkels via zintuigen (zien, horen, voelen, ruiken, proeven).</li>
+        <li><strong>Route:</strong> zintuig → zenuwstelsel → hersenen → reactie.</li>
         <li>Prikkel moet sterk genoeg zijn om opgemerkt te worden.</li>
-        <li>Herhaling → gewenning (prikkel valt minder op).</li>
+        <li>Herhaling leidt tot gewenning (prikkel valt minder op).</li>
         <li>Functies van waarneming: functioneel, emotioneel, sociaal, communicatief, overleving.</li>
-        <li>Reacties: beweging (spieren) of klierwerking (bv. speeksel).</li>
+        <li>Reacties kunnen beweging (spieren) of klierwerking (bv. speeksel) zijn.</li>
       </ul>
     </section>
 
     <section class="mindmap">
       <svg class="lines">
-        <!-- lijnen van het midden naar de nodes -->
-        <line x1="50%" y1="20%" x2="20%" y2="0%"></line>
-        <line x1="50%" y1="20%" x2="80%" y2="0%"></line>
-        <line x1="50%" y1="20%" x2="20%" y2="90%"></line>
-        <line x1="50%" y1="20%" x2="80%" y2="90%"></line>
-        <line x1="50%" y1="20%" x2="50%" y2="0%"></line>
+        <line x1="50%" y1="50%" x2="50%" y2="15%"></line>
+        <line x1="50%" y1="50%" x2="85%" y2="35%"></line>
+        <line x1="50%" y1="50%" x2="85%" y2="70%"></line>
+        <line x1="50%" y1="50%" x2="15%" y2="35%"></line>
+        <line x1="50%" y1="50%" x2="15%" y2="70%"></line>
       </svg>
 
       <div class="node center">Prikkel</div>
-
-      <div style="display:flex;justify-content:space-between;margin-top:40px;">
-        <div class="node">Zintuigen<br><small>zien, horen, voelen, ruiken, proeven</small></div>
-        <div class="node">Hersenen<br><small>betekenis geven, reactie sturen</small></div>
+      <div class="node" style="top:10%; left:50%; transform:translateX(-50%);">
+        Zintuigen<br><small>zien, horen, voelen, ruiken, proeven</small>
       </div>
-
-      <div style="display:flex;justify-content:space-between;margin-top:40px;">
-        <div class="node">Reactie<br><small>beweging of klierwerking</small></div>
-        <div class="node">Functies<br><small>functioneel, emotioneel, sociaal, communicatief</small></div>
+      <div class="node" style="top:30%; right:5%;">
+        Hersenen<br><small>betekenis geven, reactie sturen</small>
       </div>
-
-      <div style="margin-top:40px;">
-        <div class="node">Gewenning<br><small>prikkel minder sterk bij herhaling</small></div>
+      <div class="node" style="top:65%; right:5%;">
+        Functies<br><small>functioneel, emotioneel, sociaal, communicatief</small>
+      </div>
+      <div class="node" style="top:30%; left:5%;">
+        Reactie<br><small>beweging of klierwerking</small>
+      </div>
+      <div class="node" style="top:65%; left:5%;">
+        Gewenning<br><small>minder sterk bij herhaling</small>
       </div>
     </section>
   </div>
